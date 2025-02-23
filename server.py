@@ -17,7 +17,13 @@ def emot_detector():
                                                                                                                       response['sadness'],
                                                                                                                       response['dominant_emotion'])
 
-    return "For the given statement, the system response is {}.".format(result)
+    # If results are None
+    result_detector = "For the given statement, the system response is {}.".format(result)
+    # If None then just error message
+    if response['dominant_emotion'] is None:
+        result_detector = "Invalid text! Please try again!"
+
+    return result_detector
 
 @app.route("/")
 def render_index_page():
