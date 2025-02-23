@@ -1,6 +1,6 @@
 """Tests for the service."""
 import unittest
-from EmotionDetection.emotion_detection import emotion_detector
+from emotion_detection.emotion_detection import emotion_detector
 
 class TestEmotionDetection(unittest.TestCase):
     """Tests suite."""
